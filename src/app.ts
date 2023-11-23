@@ -20,7 +20,7 @@ app.use(cors());
 
 app.use("/api/recipients", RecipientsRoutes);
 app.use("/api/sendmail", SendMailRoutes);
-app.use("/api/", IndexRoutes);
+app.use("/", IndexRoutes);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   next(createHttpError(404, "Endpoint not found"));
