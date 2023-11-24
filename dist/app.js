@@ -43,7 +43,7 @@ app.use(body_parser_1.default.json());
 app.use((0, cors_1.default)());
 app.use("/api/recipients", recipients_1.default);
 app.use("/api/sendmail", sendmail_1.default);
-app.use("/api/", indexroutes_1.default);
+app.use("/", indexroutes_1.default);
 app.use((req, res, next) => {
     next((0, http_errors_1.default)(404, "Endpoint not found"));
 });
