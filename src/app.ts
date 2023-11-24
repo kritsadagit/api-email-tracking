@@ -22,6 +22,7 @@ app.use("/api/recipients", RecipientsRoutes);
 app.use("/api/sendmail", SendMailRoutes);
 app.use("/", IndexRoutes);
 
+
 app.use((req: Request, res: Response, next: NextFunction) => {
   next(createHttpError(404, "Endpoint not found"));
 });
